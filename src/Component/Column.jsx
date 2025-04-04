@@ -16,16 +16,16 @@ export default function Column({state}){
     // );
     const tasks = useStore((store)=>store.tasks, shallow)
     const task = tasks.filter((t)=>t.state === state);
-    console.log(task);
 
     const addTask = useStore((store)=>store.addTask);
     const setDraggedTask = useStore((store)=>store.setDraggedTask);
     const draggedTask = useStore((store)=>store.draggedTask);
+    const moveTask = useStore((store)=>store.moveTask);
 
     return(
         <>
         <div className="column" onDragOver={e=>e.preventDefault()}  onDrop={e=>{
-            console.log(draggedTask)
+            moveTask(draggedTask,state)
             setDraggedTask(null)
             }} >
             <div className="title-wrapper">
