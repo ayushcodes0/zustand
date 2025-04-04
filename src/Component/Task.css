@@ -1,0 +1,36 @@
+.task{
+    background-color: var(--COLOR-GRAY-LIGHT);
+    color: var(--COLOR-GRAY-DARK);
+    min-height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .3rem;
+    cursor: move;
+}
+
+.bottom-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.status{
+    background-color: gray;
+    padding: .2rem;
+    border-radius: .3rem;
+    font-size: .8rem;
+}
+
+.ONGOING{
+    background-color: var(--COLOR-ONGOING);
+}
+.DONE{
+    background-color: var(--COLOR-DONE);
+}
+
+.task-delete{
+    padding: .2rem;
+    border-radius: .3rem;
+    font-size: .8rem;
+    font-size: 16px;
+}
